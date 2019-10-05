@@ -1,6 +1,6 @@
 //function to generate random password
 function generateRandomPassword() {
-    var numberOfChar= window.prompt("Enter the length of the Password");
+    var numberOfChar= window.prompt("Enter the length of the Password between 8 to 128");
     var lowerCase = "abcdefghijklmnopqrstuvwxyz";
     var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var numbers = "0123456789";
@@ -12,10 +12,10 @@ function generateRandomPassword() {
         window.alert("Password cannot be less than 8 characters or more than 128");
     }
     else {
-        var num=window.confirm("Numbers must be included?");
-        var upper=window.confirm("Upper Case characters must be included?");
-        var lower= window.confirm("Lower case characters must be included?");
-        var special=window.confirm("Special charaters must be included?");
+        var num=window.confirm("Should Numbers must be included in Password?  Click Ok for Yes and Cancel for No");
+        var upper=window.confirm("Should Upper Case characters must be included in Password?  Click Ok for Yes and Cancel for No");
+        var lower= window.confirm("Should Lower case characters must be included in Password?  Click Ok for Yes and Cancel for No");
+        var special=window.confirm("Should Special charaters must be included in Password?  Click Ok for Yes and Cancel for No");
         if (num){passwordCharSet += numbers;}
         if (upper){passwordCharSet += upperCase;}
         if (lower){passwordCharSet += lowerCase;}
