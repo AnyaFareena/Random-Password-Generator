@@ -6,8 +6,10 @@ This is a html, CSS and Javascript combination to make password generator tool
 
 The character set used to generate password is : ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+
 
-There are two buttons:
-  Generate Button: Click this button to generate password based on selected options
-  Copy to Clipboard: Copies the generated password to clipboard
+There are two buttons -
+  ##### Generate Password Button: 
+  Click this button to generate password based on selected options 
+  ##### Copy to Clipboard Button: 
+  Copies the generated password to clipboard
   
   
