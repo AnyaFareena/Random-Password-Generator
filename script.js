@@ -10,6 +10,7 @@ function generateRandomPassword() {
     //validate if any number entered less than 8 or more than 128    
     if (numberOfChar < 8 || numberOfChar > 128 || numberOfChar == ""){
         window.alert("Password cannot be less than 8 characters or more than 128");
+        document.getElementById("password").value="";
     }
     else {
         var num=window.confirm("Should Numbers must be included in Password?  Click Ok for Yes and Cancel for No");
@@ -31,7 +32,9 @@ function generateRandomPassword() {
         }
     }
         else {
-            window.alert("None of the options are selected to generate the Password");}
+            window.alert("None of the options are selected to generate the Password");
+            document.getElementById("password").value="";
+        }
     }
 }
 
