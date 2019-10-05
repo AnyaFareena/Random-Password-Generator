@@ -1,15 +1,29 @@
+//function to generate random password
 function generateRandomPassword() {
     var numberOfChar= window.prompt("Enter the length of the Password");
-    var valuesOfPwd = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
-    console.log(numberOfChar);
-    var passWd = "";
-    if (numberOfChar < 8 || numberOfChar > 128){
+    var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var numbers = "0123456789";
+    var specialCase = "!@#$%^&*()_+";
+    var passwordCharSet = "";
+    var userPassword="";
+    //validate if any number entered less than 8 or more than 128    
+    if (numberOfChar < 8 || numberOfChar > 128 || numberOfChar == ""){
         window.alert("Password cannot be less than 8 characters or more than 128");
     }
     else {
+        var num=window.confirm("Numbers must be included?");
+        var upper=window.confirm("Upper Case characters must be included?");
+        var lower= window.confirm("Lower case characters must be included?");
+        var special=window.confirm("Special charaters must be included?");
+        if (num){passwordCharSet += numbers;}
+        if (upper){passwordCharSet += upperCase;}
+        if (lower){passwordCharSet += lowerCase;}
+        if (special){passwordCharSet += specialCase;}
+        //loop through the length to generate random number using Math function
         for (var i=0;i< numberOfChar; i++) {
-            passWd = passWd + valuesOfPwd.charAt(Math.floor(Math.random() * Math.floor(valuesOfPwd.length - 1)));
-            document.getElementById("password").value=passWd;
+            userPassword = userPassword + passwordCharSet.charAt(Math.floor(Math.random() * Math.floor(passwordCharSet.length - 1)));
+            document.getElementById("password").value=userPassword;
         }
     }
 }
@@ -28,3 +42,4 @@ function copyPassword() {
     }
 
 }
+
